@@ -1,0 +1,57 @@
+body {
+    background-color: #1C3372;
+    color: white;
+}
+
+.instituto {
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    letter-spacing: 7px;
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+.vulpes {
+    font-family: 'Nunito', sans-serif;
+    font-size: 100px;
+    font-weight: bold;
+    color: #f4511e;
+}
+
+.raposa-img {
+    position: absolute;
+    top: 90px;
+    right: 10px;
+    width: 500px;
+}
+
+.form-control {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid white;
+    
+}
+
+.btn {
+    font-size: 16px;
+    letter-spacing: 5px;
+    padding: 6px 12px;
+    background-color: #f4511e; 
+    color: aliceblue;
+    border-radius: 10px;
+    width: 120px;
+    font-weight: bold;
+  }
+.btn .nunito {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+.form-control-label {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px; 
+    font-weight: bold; 
+     
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .chat-container {
+            background-color: white;
+            width: 100%;
+            max-width: 600px;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .chat-header {
+            background-color: #343a40;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        .chat-body {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+        }
+        .message {
+            margin-bottom: 15px;
+        }
+        .message p {
+            margin: 0;
+        }
+        .message.user {
+            text-align: right;
+        }
+        .chat-footer {
+            padding: 10px;
+            background-color: #f1f1f1;
+            display: flex;
+            align-items: center;
+        }
+        .chat-footer input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            margin-right: 10px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .chat-footer button {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            Chat
+        </div>
+        <div class="chat-body" id="chatBody">
+            <div class="message user">
+                <p><strong>Você:</strong> Olá!</p>
+            </div>
+            <div class="message">
+                <p><strong>Outro usuário:</strong> Olá! Como posso ajudar?</p>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="messageInput" placeholder="Digite sua mensagem...">
+            <button id="sendMessageButton">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('sendMessageButton').addEventListener('click', function() {
+            var messageInput = document.getElementById('messageInput');
+            var messageText = messageInput.value;
+            if (messageText.trim() !== "") {
+                var chatBody = document.getElementById('chatBody');
+
+                var messageDiv = document.createElement('div');
+                messageDiv.classList.add('message', 'user');
+                var messageContent = `
+                    <p><strong>Você:</strong> ${messageText}</p>
+                `;
+                messageDiv.innerHTML = messageContent;
+                chatBody.appendChild(messageDiv);
+                chatBody.scrollTop = chatBody.scrollHeight;
+
+                messageInput.value = "";
+                messageInput.focus();
+            }
+        });
+
+        document.getElementById('messageInput').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                document.getElementById('sendMessageButton').click();
+            }
+        });
+    </script>
+</body>
+</html>

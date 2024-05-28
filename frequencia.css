@@ -1,24 +1,78 @@
 body {
+    font-family: 'Nunito', sans-serif;
     background-color: #015C91;
-    color: white;
+    font-weight: 700;
+    color: #fff;
+}
+.navbar {
+    background-color: #FF9E00;
+    color: #fff;
+}
+.navbar-brand img {
+    height: 40px;
+    margin-right: 10px;
+}
+.nav-link {
+    color: #fff !important;
+}
+.nav-link img {
+    margin-right: 8px;
 }
 .btn-orange {
-    background-color: orange;
-    border-color: orange;
-    color: white;
+    background-color: #FF8600;
+    color: #fff;
+    border: none;
+}
+.btn-orange:hover {
+    background-color: #FF8600;
+    color: #fff;
+}
+.table th {
+    color: #fff;
+    background-color: #FF8600;
+}
+.table td {
+    color: black;
 }
 .table-container {
-    margin: 0 auto;
-    margin-top: 50px;
-    background-color: white;
+    background-color: #fff;
     color: black;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
 }
-.btn-group {
-    display: flex;
-    justify-content: space-between;
+.modal-header {
+    background-color: #FF8600;
+    color: #fff;
+    border-bottom: none;
 }
-.navbar .nav-link {
-    color: white !important;
+.modal-title {
+    color: #fff;
+}
+.modal-body input[type="text"],
+.modal-body textarea {
+    border: 1px solid #015C91;
+    color: #000;
+}
+.modal-body label {
+    color: #000;
+}
+.modal-body input[type="file"] {
+    color: #FF8600;
+}
+.modal-body input[type="file"]::file-selector-button {
+    color: black;
+    background-color: #fff;
+    border: 1px solid #015C91;
+}
+.modal-body input[type="file"]::file-selector-button:hover {
+    background-color: #fff;
+}
+.modal-body button[type="submit"] {
+    background-color: #FF9E00;
+    color: #fff;
+    border: none;
+}
+.modal-body button[type="submit"]:hover {
+    background-color: #FFC766;
 }

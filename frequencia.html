@@ -1,109 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabela de Frequência</title>
-    <link rel="stylesheet" href="frequencia.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-        <div class="container">
-            <a class="navbar-brand" href="#"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-chart-bar"></i> Relatórios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-users"></i> Alunos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-chalkboard-teacher"></i> Professores</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-users-class"></i> Turmas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-comments"></i> Chat</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container table-container">
-        <div class="btn-group mb-3">
-            <button class="btn btn-orange" id="selectDateBtn">Selecionar Data</button>
-            <input type="date" id="datePicker" class="hidden">
-            <button class="btn btn-orange">Salvar</button>
-        </div>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Alunos</th>
-                    <th>Matrícula</th>
-                    <th>Justificativa</th>
-                    <th>Frequência</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Aluno 1</td>
-                    <td>123456</td>
-                    <td>
-                        <button class="btn btn-warning" data-toggle="modal" data-target="#justificativaModal">Justificativa</button>
-                    </td>
-                    <td>
-                        <button class="btn btn-warning">P</button>
-                        <button class="btn btn-warning">F</button>
-                    </td>
-                </tr>
-                <!-- Adicione mais linhas conforme necessário -->
-            </tbody>
-        </table>
-    </div>
-
-    <div class="modal fade" id="justificativaModal" tabindex="-1" aria-labelledby="justificativaModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="justificativaModalLabel">Cadastrar Justificativa</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="titulo">Título</label>
-                            <input type="text" class="form-control" id="titulo" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="justificativa">Justificativa</label>
-                            <textarea class="form-control" id="justificativa" rows="3" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="horario">Horário</label>
-                            <input type="time" class="form-control" id="horario" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="arquivo">Selecionar Arquivo</label>
-                            <input type="file" class="form-control-file" id="arquivo" required>
-                        </div>
-                        <button type="submit" class="btn btn-warning">Salvar</button>
-                    </form>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Frequência</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="frequencia.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./img/raposa 3.png" alt="Logo Escola">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><img src="./img/grafico-crescente 1.png" alt="Relatórios" height="20"> Relatórios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><img src="./img/aluna 1.png" alt="Alunos" height="20"> Alunos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><img src="./img/professor 1.png" alt="Professores" height="20"> Professores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><img src="./img/alunos 1.png" alt="Turmas" height="20"> Turmas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><img src="./img/balao-de-fala-com-linhas-de-texto 1.png" alt="Chat" height="20"> Chat</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+        </nav>
+    
+        <div class="container table-container">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Alunos</th>
+                        <th>Matrícula</th>
+                        <th>Justificativa</th>
+                        <th>Frequência</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Aluno 1</td>
+                        <td>123456</td>
+                        <td>
+                            <button class="btn btn-orange" data-toggle="modal" data-target="#justificativaModal"></button>
+                        </td>
+                        <td>
+                            <button class="btn btn-orange">C</button>
+                            <button class="btn btn-orange">F</button>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
         </div>
-    </div>
+    
+        <div class="modal fade" id="justificativaModal" tabindex="-1" aria-labelledby="justificativaModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="justificativaModalLabel">Cadastrar Justificativa</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="titulo">Título</label>
+                                <input type="text" class="form-control" id="titulo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="justificativa">Justificativa</label>
+                                <textarea class="form-control" id="justificativa" rows="3" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="arquivo">Selecionar Arquivo</label>
+                                <input type="file" class="form-control-file" id="arquivo" required>
+                            </div>
+                            <button type="submit" class="btn btn-orange">Salvar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     
 </body>
 </html>

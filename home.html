@@ -13,6 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./home.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -47,43 +48,27 @@
     </nav>
 
     <div class="container mt-4">
-        <div class="blue-rectangle">
-            <div class="text-center">
+        <div class="image-background">
+            <div class="overlay-text text-center">
                 <h1>Bem-vindos à nossa escola</h1>
                 <p>Descubra um mundo de conhecimento, amizade e diversão na nossa escola.</p>
                 <p>Venha fazer parte da nossa família escolar e descobrir um mundo de possibilidades!</p>
             </div>
-            <div class="d-flex justify-content-between mt-4" id="main-content">
-                <div class="small-box bg-danger text-center">
-                    <img src="./img/icone1.png" alt="Ícone 1" height="50">
-                </div>
-                <div class="small-box bg-light text-center">
-                    <img src="./img/icone2.png" alt="Ícone 2" height="50">
-                </div>
-                <div class="small-box bg-warning text-center">
-                    <img src="img/icone3.png" alt="Ícone 3" height="50">
-                </div>
-                <div class="small-box bg-primary text-center">
-                    <img src="img/icone4.png" alt="Ícone 4" height="50">
-                </div>
-                <div class="small-box bg-light text-center">
-                    <img src="img/icone5.png" alt="Ícone 5" height="50">
-                </div>
-                <div class="small-box bg-info text-center">
-                    <img src="img/icone6.png" alt="Ícone 6" height="50">
-                </div>
-                <div class="small-box bg-success text-center">
-                    <img src="img/icone7.png" alt="Ícone 7" height="50">
-                </div>
-                <div class="small-box bg-dark text-center">
-                    <img src="img/icone8.png" alt="Ícone 8" height="50">
-                </div>
-                <div class="small-box bg-danger text-center">
-                    <img src="img/icone8.png" alt="Ícone 8" height="50">
-                </div>
-                <div class="small-box bg-info text-center">
-                    <img src="img/icone8.png" alt="Ícone 8" height="50">
-                </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <p class="quadro text-center">Quadro de Avisos</p>
+        <div class="comunicado">
+            <div class="comunicado-body">
+                <h5 class="comunicado-title">Passeio para o Aquário de São Paulo!</h5>
+                <p>É com grande entusiasmo que informamos sobre o próximo passeio escolar de nossos alunos ao Aquário de São Paulo! Este passeio promete ser uma experiência educativa e emocionante para nossos estudantes, proporcionando-lhes a oportunidade de explorar e aprender sobre a vida marinha de forma interativa e divertida.</p>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="visto-checkbox" onchange="toggleCheckbox(this)">
+                <label for="visto-checkbox">Não Visto</label>
+            </div>
+            <div class="date-box">
+                05/06/2024
             </div>
         </div>
     </div>
